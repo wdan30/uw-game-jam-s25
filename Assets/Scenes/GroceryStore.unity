@@ -356,8 +356,9 @@ GameObject:
   - component: {fileID: 1021963153}
   - component: {fileID: 1021963152}
   - component: {fileID: 1021963151}
+  - component: {fileID: 1021963155}
   m_Layer: 0
-  m_Name: Square (2)
+  m_Name: IceGuy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -502,6 +503,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1021963155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021963150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28769a16d5299c14eb94fe990d5bf6aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iceRigidbody: {fileID: 1021963151}
+  iceSpeed: 2
 --- !u!1 &1857250613
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,7 +530,7 @@ GameObject:
   - component: {fileID: 1857250615}
   - component: {fileID: 1857250614}
   m_Layer: 0
-  m_Name: Square
+  m_Name: MeatGuy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
