@@ -514,6 +514,7 @@ GameObject:
   - component: {fileID: 1857250616}
   - component: {fileID: 1857250615}
   - component: {fileID: 1857250614}
+  - component: {fileID: 1857250618}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -660,6 +661,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1857250618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857250613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21e627d95811d8441a50a92e9fcf3224, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meatBody: {fileID: 1857250614}
+  meatSpeed: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
