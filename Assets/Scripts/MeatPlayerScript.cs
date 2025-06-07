@@ -13,7 +13,8 @@ public class MeatPlayerScript : MonoBehaviour
     [SerializeField] private float meatSpeed;
     [SerializeField] private float maxSpeed;
     [SerializeField] private float horizontalFriction;
-   
+    [SerializeField] private float jumpStrength;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +33,7 @@ public class MeatPlayerScript : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.W) && isGrounded())
         {
             Debug.Log("Jump");
-            meatBody.velocity += Vector2.up * 10;
+            meatBody.velocity += Vector2.up * jumpStrength;
         }
 
         if (Input.GetKey(KeyCode.A))

@@ -357,7 +357,7 @@ GameObject:
   - component: {fileID: 1021963152}
   - component: {fileID: 1021963151}
   - component: {fileID: 1021963155}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: IceGuy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -537,7 +537,7 @@ GameObject:
   - component: {fileID: 1857250615}
   - component: {fileID: 1857250614}
   - component: {fileID: 1857250618}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MeatGuy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -703,6 +703,7 @@ MonoBehaviour:
   meatSpeed: 1
   maxSpeed: 9
   horizontalFriction: 0.92
+  jumpStrength: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
