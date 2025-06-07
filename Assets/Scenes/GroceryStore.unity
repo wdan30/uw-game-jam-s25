@@ -390,7 +390,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1021963152
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -515,8 +515,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28769a16d5299c14eb94fe990d5bf6aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iceRigidbody: {fileID: 1021963151}
+  iceBody: {fileID: 1021963151}
   iceSpeed: 2
+  maxSpeed: 9
+  horizontalFriction: 0.91
+  horizontalSpeed: 0
 --- !u!1 &1857250613
 GameObject:
   m_ObjectHideFlags: 0
