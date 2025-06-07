@@ -519,7 +519,7 @@ MonoBehaviour:
   iceSpeed: 1
   maxSpeed: 9
   horizontalFriction: 0.91
-  horizontalSpeed: 0
+  horizontalSpeed: 7
   iceCollider: {fileID: 1021963152}
   groundLayer:
     serializedVersion: 2
