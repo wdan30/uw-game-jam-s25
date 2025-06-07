@@ -13,6 +13,7 @@ public class IcePlayerScript : MonoBehaviour
     [SerializeField] private float horizontalSpeed;
     [SerializeField] private BoxCollider2D iceCollider;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private float jumpStrength;
    
     // Start is called before the first frame update
     void Start()
@@ -31,7 +32,7 @@ public class IcePlayerScript : MonoBehaviour
         } 
         else if (Input.GetKeyDown(KeyCode.UpArrow) && isGrounded())
         {
-            iceBody.velocity += Vector2.up * 10;
+            iceBody.velocity += Vector2.up * jumpStrength;
         }
 
         if (Input.GetKey(KeyCode.LeftArrow))
