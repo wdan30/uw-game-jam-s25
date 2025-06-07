@@ -550,7 +550,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.05
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -689,7 +689,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meatBody: {fileID: 1857250614}
-  meatSpeed: 0
+  meatSpeed: 0.3
+  maxSpeed: 10
+  horizontalFriction: 0
+  horizontalSpeed: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
