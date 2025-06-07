@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 131909436}
   - component: {fileID: 131909435}
   - component: {fileID: 131909434}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -688,11 +688,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21e627d95811d8441a50a92e9fcf3224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meatCollider: {fileID: 1857250615}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
   meatBody: {fileID: 1857250614}
-  meatSpeed: 0.3
-  maxSpeed: 10
-  horizontalFriction: 0
-  horizontalSpeed: 0
+  meatSpeed: 1
+  maxSpeed: 9
+  horizontalFriction: 0.92
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
