@@ -13,6 +13,7 @@ public class IcePlayerScript : MonoBehaviour
     [SerializeField] private float horizontalSpeed;
     [SerializeField] private BoxCollider2D iceCollider;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private LayerMask playerLayer;
     [SerializeField] private float jumpStrength;
    
     // Start is called before the first frame update
@@ -56,10 +57,23 @@ public class IcePlayerScript : MonoBehaviour
             iceBody.velocity = new Vector2(currX * horizontalFriction, iceBody.velocity.y);
         }
     }
-        
+
     private bool isGrounded()
     {
-        RaycastHit2D raycastHit = Physics2D.BoxCast(iceCollider.bounds.center, iceCollider.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
-        return raycastHit.collider != null;
+        RaycastHit2D groundCheck = Physics2D.BoxCast(iceCollider.bounds.center, iceCollider.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
+
+        RaycastHit2D playerCheck = Physics2D.BoxCast(iceCollider.bounds.center, iceCollider.bounds.size, 0, Vector2.down, 0.1f, playerLayer);
+
+        if (playerCheck.collider != null)
+        {
+            var otherPlayer = playerCheck.collider.gameObject;
+            Debug.Log("Player detected: " + otherPlayer.name);
+            if (iceCollider.bounds.center.y > otherPlayer.GetComponent<Collider2D>().bounds.center.y)
+            {
+                return true;
+            }
+        }
+
+        return groundCheck.collider != null;
     }
 }

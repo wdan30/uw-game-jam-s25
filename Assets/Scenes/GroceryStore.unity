@@ -357,7 +357,7 @@ GameObject:
   - component: {fileID: 1021963152}
   - component: {fileID: 1021963151}
   - component: {fileID: 1021963155}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: IceGuy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -516,7 +516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iceBody: {fileID: 1021963151}
-  iceSpeed: 2
+  iceSpeed: 1
   maxSpeed: 9
   horizontalFriction: 0.91
   horizontalSpeed: 0
@@ -524,6 +524,10 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  jumpStrength: 7
 --- !u!1 &1857250613
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,7 +541,7 @@ GameObject:
   - component: {fileID: 1857250615}
   - component: {fileID: 1857250614}
   - component: {fileID: 1857250618}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: MeatGuy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -570,7 +574,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1857250615
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -699,11 +703,14 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 128
   meatBody: {fileID: 1857250614}
   meatSpeed: 1
   maxSpeed: 9
   horizontalFriction: 0.92
-  jumpStrength: 0
+  jumpStrength: 7
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

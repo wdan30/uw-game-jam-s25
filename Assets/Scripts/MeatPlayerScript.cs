@@ -9,6 +9,7 @@ public class MeatPlayerScript : MonoBehaviour
 {
     [SerializeField] private BoxCollider2D meatCollider;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private LayerMask playerLayer;
     [SerializeField] private Rigidbody2D meatBody;
     [SerializeField] private float meatSpeed;
     [SerializeField] private float maxSpeed;
@@ -57,8 +58,19 @@ public class MeatPlayerScript : MonoBehaviour
 
     private bool isGrounded()
     {
-        RaycastHit2D raycastHit = Physics2D.BoxCast(meatCollider.bounds.center, meatCollider.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
+        RaycastHit2D groundCheck = Physics2D.BoxCast(meatCollider.bounds.center, meatCollider.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
 
-        return raycastHit.collider != null;
+        RaycastHit2D playerCheck = Physics2D.BoxCast(meatCollider.bounds.center, meatCollider.bounds.size, 0, Vector2.down, 0.1f, playerLayer);
+
+        if (playerCheck.collider != null)
+        {
+            var otherPlayer = playerCheck.collider.gameObject;
+            if (meatCollider.bounds.center.y > otherPlayer.GetComponent<Collider2D>().bounds.center.y)
+            {
+                return true;
+            }
+        }
+
+        return groundCheck.collider != null;
     }
 }
