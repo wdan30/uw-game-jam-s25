@@ -59,7 +59,6 @@ public class MeatPlayerScript : MonoBehaviour
     private bool isGrounded()
     {
         RaycastHit2D groundCheck = Physics2D.BoxCast(meatCollider.bounds.center, meatCollider.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
-
         RaycastHit2D playerCheck = Physics2D.BoxCast(meatCollider.bounds.center, meatCollider.bounds.size, 0, Vector2.down, 0.1f, playerLayer);
 
         if (playerCheck.collider != null)
